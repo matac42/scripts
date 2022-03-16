@@ -11,11 +11,11 @@ use GitLab::API::v4;
 # - Set GitLab API URL to $v4_api_url
 # 
 # How To Use
-# $perl create-project-names.pl fullpath.txt
+# $perl create-empty-project.pl fullpath.txt
 # 
 # fullpath.txt Ex
-# ie-web/student/e18/e185742
-# ie-web/other/enpit
+# group1/subgroup1/project1
+# group2/subgroup1/project1
 # ...
 #
 # Author: matac
