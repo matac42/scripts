@@ -7,26 +7,14 @@ my ($x1,$y1) = do { chomp( my $l = <> ); split m{\s}, $l };
 my ($x2,$y2) = do { chomp( my $l = <> ); split m{\s}, $l };
 my ($x3,$y3) = do { chomp( my $l = <> ); split m{\s}, $l };
 
-my @answer = [];
+my ($xans, $yans);
 
-if ($x1 == $x2) {
-    push @answer, $x3;
-}
-elsif ($x1 == $x3) {
-    push @answer, $x2;
-}
-else {
-    push @answer, $x1;
-}
+$xans = $x3 if ($x1 == $x2);
+$xans = $x2 if ($x1 == $x3);
+$xans = $x1 if ($x2 == $x3);
 
-if ($y1 == $y2) {
-    push @answer, $y3;
-}
-elsif ($y1 == $y3) {
-    push @answer, $y2;
-}
-else {
-    push @answer, $y1;
-}
+$yans = $y3 if ($y1 == $y2);
+$yans = $y2 if ($y1 == $y3);
+$yans = $y1 if ($y2 == $y3);
 
-say "$answer[1] $answer[2]";
+say "$xans $yans";
