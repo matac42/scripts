@@ -2,6 +2,7 @@ use 5.10.0;
 use strict;
 use warnings;
 use utf8;
+use Data::Dumper;
 
 my ($n,$k) = do { chomp( my $l = <> ); split m{\s}, $l };
 my @a = do { chomp( my $l = <> ); split m{\s}, $l };
@@ -20,7 +21,8 @@ sub zip {
     }
     return @aa;
 }
-
+my @cd = zip(\@a, \@b);
+say Dumper(\@cd);
 for (my $i = 0; $i < $n-1; $i++) {
     my @tmp_a = (0, 0);
     for (my $j = 0; $j <= 1; $j++) {
